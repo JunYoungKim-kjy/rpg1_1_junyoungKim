@@ -20,6 +20,12 @@ public class Unit {
 	public void setLevel(int level) {
 		this.level = level;
 	}
+	public int getHp() {
+		return hp;
+	}
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
 	public int getMaxHp() {
 		return maxHp;
 	}
@@ -43,6 +49,9 @@ public class Unit {
 	}
 	public void setParty(boolean party) {
 		this.party = party;
+	}
+	public boolean getParty() {
+		return party;
 	}
 	Unit(String n, int l, int hp, int a, int d, int e) {
 		this.name = n;
