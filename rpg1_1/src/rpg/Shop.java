@@ -54,9 +54,18 @@ public class Shop {
 				System.out.println("구입할 아이템 번호를 입력하세요 [0.뒤로가기]");
 //				int buyNum = Game.getValue(">>", 0, cnt);
 				Item buyItem = getBuyItem(selKind);
+				if(buyItem == null)break;
 				for(int i=0; i < itemList.size(); i+=1) {
-					if(itemList.get(i).getKind() == selKind) {
-//						if(cnt == buyNum)
+					if(itemList.get(i)==buyItem) {
+						Player.inven.addItem(itemList.get(i));
+						Player.setMoney(Player.getMoney() - itemList.get(i).getPrice());
+						System.out.println("[" + itemList.get(i).getName() + "]을 구매 했습니다.");
+						try {
+							Thread.sleep(600);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						break;
 					}
 				}
 				
@@ -69,8 +78,8 @@ public class Shop {
 		int cnt = getItemCnt(kind);
 		System.out.println("[보유골드 : "+Player.getMoney()+"]");
 		System.out.println("구입할 아이템 번호를 입력하세요 [0.뒤로가기]");
-		int buyNum = Game.getValue(">>", 0, cnt);
-		if(buyNum==0)return null;
+		int buyNum = Game.getValue(">>", 0, cnt)-1;
+		if(buyNum==-1)return null;
 		int num=0;
 		for(int i=0; i < itemList.size(); i++) {
 			if(itemList.get(i).getKind() != kind)continue;
