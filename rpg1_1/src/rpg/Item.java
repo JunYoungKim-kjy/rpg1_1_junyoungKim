@@ -1,23 +1,33 @@
 package rpg;
 
 public class Item {
-	private static final int WEPON = 1;
-	private static final int ARMOR = 2;
-	private static final int ring = 3;
-	
+	public static final int WEPON = 1;
+	public static final int ARMOR = 2;
+	public static final int RING = 3;
 	private int kind;
 	private String name;
 	private int power;
-	public int getPower() {
+	private int price;
+	
+
+ 	public int getPower() {
 		return power;
 	}
 	public String getName() {
 		return name;
 	}
-	Item(int kind, String name, int power) {
+	public int getPrice() {
+		return price;
+	}
+	public int getKind() {
+		return kind;
+	}
+	
+	public Item(int kind, String name, int power,int price) {
 		this.kind = kind;
 		this.name = name;
 		this.power = power;
+		this.price = price;
 	}
 	
 }
