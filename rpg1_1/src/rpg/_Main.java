@@ -3,6 +3,7 @@ package rpg;
 public class _Main {
 
 	public static void main(String[] args) {
+		
 		// JDK 11
 		// UTF-8
 		
@@ -16,8 +17,8 @@ public class _Main {
 		//    바뀐 브랜치 확인		
 		// ㄴ rpg1_1 작업 시작
 		// ㄴ 커밋 & 푸시 
-		
 		new Game();
+	
 	}
 
 }
