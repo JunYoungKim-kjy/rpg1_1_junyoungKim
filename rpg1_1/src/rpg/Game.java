@@ -38,11 +38,11 @@ class Game {
 			System.out.println("[4.저장] [5.로드] [0.종료]");
 			int sel = getValue(">>", 0, 5);
 			if (sel == 1) {
-				guild.guildMenu();
+				Player.guildMenu();
 			} else if (sel == 2) {
-//				Shop.shopMng();
+				shop.shopMng();
 			} else if (sel == 3) {
-//				Player.inventoryMenu();
+				Player.inventoryMenu();
 			} else if (sel == 4) {
 //				try {
 //					FileData.save();
