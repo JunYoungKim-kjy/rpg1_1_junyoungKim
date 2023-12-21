@@ -57,7 +57,7 @@ public class Shop {
 				if(buyItem == null)break;
 				for(int i=0; i < itemList.size(); i+=1) {
 					if(itemList.get(i)==buyItem) {
-						Player.inven.addItem(itemList.get(i));
+						Player.getInven().addItem(itemList.get(i));
 						Player.setMoney(Player.getMoney() - itemList.get(i).getPrice());
 						System.out.println("[" + itemList.get(i).getName() + "]을 구매 했습니다.");
 						try {
